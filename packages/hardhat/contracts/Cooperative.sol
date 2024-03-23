@@ -7,9 +7,10 @@ contract Cooperative is ERC20{
     address bank;
     address usdtContract;
     uint private _tokenPrice;
+    uint private _goal;
     uint private _supply;
     string private _imagem;
-    constructor(string memory name_, string memory symbol_,uint tokenPrice_, uint supply_, string memory imagem_, address bank_)
+    constructor(string memory name_, string memory symbol_,uint tokenPrice_, uint supply_, string memory imagem_, address bank_, uint goal_)
     ERC20(name_ , symbol_){
         bank = bank_;
         usdtContract = 0xFc2AcC124Bd321615487265F1115C7c16a8F8d4A;
@@ -17,6 +18,7 @@ contract Cooperative is ERC20{
         _tokenPrice = tokenPrice_;
         _supply = supply_;
         _imagem = imagem_;
+        _goal = goal_;
     }
 
     function tokenBank() external view returns(address){
@@ -50,9 +52,9 @@ contract Cooperative is ERC20{
 contract CooperativeFactory{
     Cooperative[] cooperatives;
 
-    function create(string memory _name, string memory _symbol,uint _tokenPrice, uint _supply, string memory _imagem) public {
+    function create(string memory _name, string memory _symbol,uint _tokenPrice, uint _supply, string memory _imagem,uint _goal) public {
         address _bank = msg.sender;
-        Cooperative cooperative = new Cooperative(_name, _symbol, _tokenPrice, _supply, _imagem, _bank);
+        Cooperative cooperative = new Cooperative(_name, _symbol, _tokenPrice, _supply, _imagem, _bank, _goal);
         cooperatives.push(cooperative);
     }
 
