@@ -26,9 +26,9 @@ export function CooperativeCard({ cooperative }: CooperativeCardProps) {
 
       <Bar progress={cooperative.totalProgress} />
 
-      <div className="flex justify-between [&>span]:font-semibold mt-5">
+      <div className="flex justify-between [&>span]:font-semibold [&>span]:text-2xl mt-5">
         <span>{cooperative.totalProgress}%</span>
-        <span>{cooperative.currentProgress}</span>
+        <span>${cooperative.currentProgress}</span>
         <span>{cooperative.remaningTime}</span>
       </div>
     </Link>

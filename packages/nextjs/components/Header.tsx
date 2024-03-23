@@ -54,13 +54,10 @@ export const HeaderMenuLinks = () => {
   );
 };
 
-/**
- * Site header
- */
 export const Header = () => {
   return (
-    <div className="sticky lg:static top-0 navbar bg-yellow-50 h-[80px] flex-shrink-0 justify-between z-20 px-0 sm:px-2 shadow-md">
-      <div className="w-auto lg:w-1/2">
+    <header className="navbar bg-yellow-50 h-[80px] flex-shrink-0 justify-between z-20 px-8 xl:px-20 shadow-md">
+      <nav className="shrink-0 flex items-center flex-nowrap">
         <Link href="/" passHref className="lg:flex items-center gap-2 ml-4 mr-6 shrink-0">
           <div className="flex relative w-10 h-10">
             <Image alt="SE2 logo" className="cursor-pointer" fill src="/logo.svg" />
@@ -73,19 +70,21 @@ export const Header = () => {
         <ul className="lg:flex lg:flex-nowrap  px-1 gap-2">
           <HeaderMenuLinks />
         </ul>
-      </div>
+      </nav>
 
-      <div className="bg-yellow-100 px-4 rounded-lg max-w-[510px] h-10 shadow-md mx-4">
+      <div className="bg-yellow-100 px-4 flex rounded-lg flex-shrink w-full max-w-[510px] h-10 shadow-md mx-auto">
         <MagnifyingGlassIcon width={22} className="stroke-yellow-950 pointer-events-none mr-2" />
-        <input className="bg-transparent rounded placeholder:text-yellow-950 focus:outline-none" placeholder="Search" />
+        <input
+          className="bg-transparent rounded w-full placeholder:text-yellow-950 focus:outline-none"
+          placeholder="Search"
+        />
       </div>
 
-      <div className="flex-grow mr-4 gap-8 [&>svg]:shrink-0">
+      <div className="flex justify-end items-center gap-8 [&>svg]:shrink-0">
         <SunIcon width={30} className="stroke-yellow-950" />
         <GlobeAltIcon width={30} className="stroke-yellow-950" />
         <RainbowKitCustomConnectButton />
-        {/* <FaucetButton /> */}
       </div>
-    </div>
+    </header>
   );
 };

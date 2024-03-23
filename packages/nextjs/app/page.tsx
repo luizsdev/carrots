@@ -25,8 +25,8 @@ const cooperatives = [
     members: 20,
     crops: ["Cassava", "Maize", "Tomato"],
     image: "/coop2.png",
-    totalProgress: 88,
-    currentProgress: "4.86K/6K",
+    totalProgress: 25,
+    currentProgress: "2.5K/10K",
     remaningTime: "7 days",
   },
   {
@@ -37,8 +37,8 @@ const cooperatives = [
     members: 30,
     crops: ["Cassava", "Maize", "Tomato"],
     image: "/coop3.png",
-    totalProgress: 88,
-    currentProgress: "4.86K/6K",
+    totalProgress: 75,
+    currentProgress: "18K/22K",
     remaningTime: "7 days",
   },
   {
@@ -48,15 +48,15 @@ const cooperatives = [
     description: "Farm 4 is a cooperative in Ho",
     members: 40,
     crops: ["Cassava", "Maize", "Tomato"],
-    image: "/coop1.png",
-    totalProgress: 88,
-    currentProgress: "4.86K/6K",
+    image: "/coop3.png",
+    totalProgress: 97,
+    currentProgress: "2.86K/3K",
     remaningTime: "7 days",
   },
 ];
 const Home: NextPage = () => {
   return (
-    <main className="mx-20 py-[60px]">
+    <>
       <div className="flex justify-between pb-[60px]">
         <div className="flex items-center gap-[10px]">
           <Squares2X2Icon width={30} className="stroke-yellow-500" />
@@ -71,7 +71,7 @@ const Home: NextPage = () => {
           return <CooperativeCard key={cooperative.id} cooperative={cooperative} />;
         })}
       </div>
-    </main>
+    </>
   );
 };
 
