@@ -1,7 +1,8 @@
 "use client";
 
-import Link from "next/link";
+import { CooperativeCard } from "./marketplace/components/CooperativeCard";
 import type { NextPage } from "next";
+import { FunnelIcon, ListBulletIcon, Squares2X2Icon } from "@heroicons/react/24/outline";
 
 const cooperatives = [
   {
@@ -11,6 +12,10 @@ const cooperatives = [
     description: "Farm 1 is a cooperative in Kumasi",
     members: 10,
     crops: ["Cassava", "Maize", "Tomato"],
+    image: "/coop1.png",
+    totalProgress: 88,
+    currentProgress: "4.86K/6K",
+    remaningTime: "7 days",
   },
   {
     name: "Farm 2",
@@ -19,6 +24,10 @@ const cooperatives = [
     description: "Farm 2 is a cooperative in Accra",
     members: 20,
     crops: ["Cassava", "Maize", "Tomato"],
+    image: "/coop2.png",
+    totalProgress: 88,
+    currentProgress: "4.86K/6K",
+    remaningTime: "7 days",
   },
   {
     name: "Farm 3",
@@ -27,6 +36,10 @@ const cooperatives = [
     description: "Farm 3 is a cooperative in Takoradi",
     members: 30,
     crops: ["Cassava", "Maize", "Tomato"],
+    image: "/coop3.png",
+    totalProgress: 88,
+    currentProgress: "4.86K/6K",
+    remaningTime: "7 days",
   },
   {
     name: "Farm 4",
@@ -35,23 +48,30 @@ const cooperatives = [
     description: "Farm 4 is a cooperative in Ho",
     members: 40,
     crops: ["Cassava", "Maize", "Tomato"],
+    image: "/coop1.png",
+    totalProgress: 88,
+    currentProgress: "4.86K/6K",
+    remaningTime: "7 days",
   },
 ];
 const Home: NextPage = () => {
   return (
-    <>
-      <div className="py-14 grid grid-cols-3 mx-16 gap-8">
+    <main className="mx-20 py-[60px]">
+      <div className="flex justify-between pb-[60px]">
+        <div className="flex items-center gap-[10px]">
+          <Squares2X2Icon width={30} className="stroke-yellow-500" />
+          <ListBulletIcon width={30} />
+        </div>
+
+        <FunnelIcon width={30} />
+      </div>
+
+      <div className="grid grid-cols-2 gap-8 xl:grid-cols-3">
         {cooperatives.map(cooperative => {
-          return (
-            <div className="aspect-video border-red-500 border" key={cooperative.id}>
-              <Link href={`/cooperative/${cooperative.id}`} className="aspect-video border-red-500 border">
-                {cooperative.name}
-              </Link>
-            </div>
-          );
+          return <CooperativeCard key={cooperative.id} cooperative={cooperative} />;
         })}
       </div>
-    </>
+    </main>
   );
 };
 

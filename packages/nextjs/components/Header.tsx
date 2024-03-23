@@ -4,8 +4,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
+import { GlobeAltIcon, MagnifyingGlassIcon, SunIcon } from "@heroicons/react/24/outline";
+import { RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
 
 type HeaderMenuLink = {
   label: string;
@@ -61,7 +61,7 @@ export const Header = () => {
   return (
     <div className="sticky lg:static top-0 navbar bg-yellow-50 h-[80px] flex-shrink-0 justify-between z-20 px-0 sm:px-2 shadow-md">
       <div className="w-auto lg:w-1/2">
-        <Link href="/" passHref className="hidden lg:flex items-center gap-2 ml-4 mr-6 shrink-0">
+        <Link href="/" passHref className="lg:flex items-center gap-2 ml-4 mr-6 shrink-0">
           <div className="flex relative w-10 h-10">
             <Image alt="SE2 logo" className="cursor-pointer" fill src="/logo.svg" />
           </div>
@@ -70,17 +70,21 @@ export const Header = () => {
             <span className="text-xs">Cooperative tokenization</span>
           </div>
         </Link>
-        <ul className="hidden lg:flex lg:flex-nowrap  px-1 gap-2">
+        <ul className="lg:flex lg:flex-nowrap  px-1 gap-2">
           <HeaderMenuLinks />
         </ul>
       </div>
-      <div className="bg-yellow-100 px-4 rounded-lg w-[510px] h-10 shadow-md">
+
+      <div className="bg-yellow-100 px-4 rounded-lg max-w-[510px] h-10 shadow-md mx-4">
         <MagnifyingGlassIcon width={22} className="stroke-yellow-950 pointer-events-none mr-2" />
         <input className="bg-transparent rounded placeholder:text-yellow-950 focus:outline-none" placeholder="Search" />
       </div>
-      <div className="navbar-end flex-grow mr-4">
+
+      <div className="flex-grow mr-4 gap-8 [&>svg]:shrink-0">
+        <SunIcon width={30} className="stroke-yellow-950" />
+        <GlobeAltIcon width={30} className="stroke-yellow-950" />
         <RainbowKitCustomConnectButton />
-        <FaucetButton />
+        {/* <FaucetButton /> */}
       </div>
     </div>
   );
