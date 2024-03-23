@@ -6,7 +6,7 @@ import { FunnelIcon, ListBulletIcon, Squares2X2Icon } from "@heroicons/react/24/
 
 const cooperatives = [
   {
-    name: "Farm 1",
+    name: "Cooperativa de Café da Paraíba",
     location: "Kumasi",
     id: "1",
     description: "Farm 1 is a cooperative in Kumasi",
@@ -18,7 +18,7 @@ const cooperatives = [
     remaningTime: "7 days",
   },
   {
-    name: "Farm 2",
+    name: "Cooperativa de Milho Verde",
     location: "Accra",
     id: "2",
     description: "Farm 2 is a cooperative in Accra",
@@ -30,7 +30,7 @@ const cooperatives = [
     remaningTime: "13 days",
   },
   {
-    name: "Farm 3",
+    name: "Cooperativa de Soja do Mato Grosso",
     location: "Takoradi",
     id: "3",
     description: "Farm 3 is a cooperative in Takoradi",
@@ -42,7 +42,7 @@ const cooperatives = [
     remaningTime: "4 days",
   },
   {
-    name: "Farm 4",
+    name: "Cooperativa de Soja do Mato Grosso",
     location: "Ho",
     id: "4",
     description: "Farm 4 is a cooperative in Ho",
