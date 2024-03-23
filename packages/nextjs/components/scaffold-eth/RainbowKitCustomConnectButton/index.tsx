@@ -7,6 +7,7 @@ import { AddressQRCodeModal } from "./AddressQRCodeModal";
 import { WrongNetworkDropdown } from "./WrongNetworkDropdown";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { Address } from "viem";
+import { GlobeAltIcon, SunIcon } from "@heroicons/react/24/outline";
 import { useAutoConnect, useNetworkColor } from "~~/hooks/scaffold-eth";
 import { useTargetNetwork } from "~~/hooks/scaffold-eth/useTargetNetwork";
 import { getBlockExplorerAddressLink } from "~~/utils/scaffold-eth";
@@ -32,9 +33,17 @@ export const RainbowKitCustomConnectButton = () => {
             {(() => {
               if (!connected) {
                 return (
-                  <button className="btn btn-primary btn-sm" onClick={openConnectModal} type="button">
-                    Connect Wallet
-                  </button>
+                  <div className="flex gap-8">
+                    <SunIcon width={30} className="stroke-yellow-950" />
+                    <GlobeAltIcon width={30} className="stroke-yellow-950" />
+                    <button
+                      className="bg-yellow-950 rounded-lg w-[160px] h-10 font-semibold text-lg text-yellow-50 hover:bg-yellow-900 transition-colors"
+                      onClick={openConnectModal}
+                      type="button"
+                    >
+                      Connect
+                    </button>
+                  </div>
                 );
               }
 
