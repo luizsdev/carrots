@@ -27,7 +27,7 @@ const cooperatives = [
     image: "/coop2.png",
     totalProgress: 25,
     currentProgress: "2.5K/10K",
-    remaningTime: "7 days",
+    remaningTime: "13 days",
   },
   {
     name: "Farm 3",
@@ -39,7 +39,7 @@ const cooperatives = [
     image: "/coop3.png",
     totalProgress: 75,
     currentProgress: "18K/22K",
-    remaningTime: "7 days",
+    remaningTime: "4 days",
   },
   {
     name: "Farm 4",
@@ -51,7 +51,7 @@ const cooperatives = [
     image: "/coop3.png",
     totalProgress: 97,
     currentProgress: "2.86K/3K",
-    remaningTime: "7 days",
+    remaningTime: "1 day",
   },
 ];
 const Home: NextPage = () => {
