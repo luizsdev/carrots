@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import Link from "next/link";
 import { NetworkOptions } from "./NetworkOptions";
 import CopyToClipboard from "react-copy-to-clipboard";
 import { getAddress } from "viem";
@@ -7,6 +8,7 @@ import {
   ArrowLeftOnRectangleIcon,
   ArrowTopRightOnSquareIcon,
   ArrowsRightLeftIcon,
+  CakeIcon,
   CheckCircleIcon,
   ChevronDownIcon,
   DocumentDuplicateIcon,
@@ -92,6 +94,14 @@ export const AddressInfoDropdown = ({
             <label htmlFor="qrcode-modal" className="btn-sm !rounded-xl flex gap-3 py-3">
               <QrCodeIcon className="h-6 w-4 ml-2 sm:ml-0" />
               <span className="whitespace-nowrap">View QR Code</span>
+            </label>
+          </li>
+          <li className={selectingNetwork ? "hidden" : ""}>
+            <label className="btn-sm !rounded-xl flex gap-3 py-3">
+              <CakeIcon className="h-6 w-4 ml-2 sm:ml-0" />
+              <Link href="/rewards" className="whitespace-nowrap">
+                Rewards
+              </Link>
             </label>
           </li>
           <li className={selectingNetwork ? "hidden" : ""}>
