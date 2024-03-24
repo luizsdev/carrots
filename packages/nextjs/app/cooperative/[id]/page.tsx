@@ -8,14 +8,14 @@ import { CooperativeProps } from "~~/types/marketplace";
 
 const cooperatives: CooperativeProps[] = [
   {
-    name: "Cooperativa de Café da Paraíba",
+    name: "Cooperativa de Soja do Mato Grosso",
     location: "Kumasi",
     id: "1",
     members: 10,
     crops: ["Cassava", "Maize", "Tomato"],
-    image: "/coop1.png",
+    image: "/coop3.png",
     totalProgress: 91.6,
-    currentProgress: "5.5K/6K",
+    currentProgress: "55K/60K",
     remaningTime: "7 days",
   },
   {
@@ -104,7 +104,7 @@ export default function Cooperative({ params }: { params: { id: string } }) {
 
         <div className="flex justify-between [&>span]:font-semibold [&>span]:text-[38px] mt-5 [&>span]:text-yellow-950">
           <span>{progress}%</span>
-          <span>${progress === 100 ? "6K/6K" : cooperative.currentProgress}</span>
+          <span>${progress === 100 ? "60K/60K" : cooperative.currentProgress}</span>
           <span>{cooperative.remaningTime}</span>
         </div>
 
@@ -134,11 +134,11 @@ export default function Cooperative({ params }: { params: { id: string } }) {
 
         <div className="mt-14 flex items-center justify-between gap-2">
           <span className="text-yellow-950 text-xl font-semibold">
-            Max Supply: <span className="font-normal">60000 COOP</span>
+            Max Supply: <span className="font-normal">2.000.000 COOP</span>
           </span>
 
           <span className="text-yellow-950 text-xl font-semibold">
-            Price Unit: <span className="font-normal">Recompensa*</span>
+            Unit Price: <span className="font-normal">0,00030 ETH</span>
           </span>
         </div>
 
