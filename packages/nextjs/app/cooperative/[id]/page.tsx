@@ -92,7 +92,7 @@ export default function Cooperative({ params }: { params: { id: string } }) {
         <p>Junte-se a nós e faça parte dessa história de sucesso!</p>
       </div>
 
-      <div className="shadow-xl rounded-[10px] px-14 pt-8 pb-14 shadow-yellow-900/20 flex flex-col">
+      <div className="shadow-xl rounded-[10px] px-14 pt-8 pb-14 shadow-yellow-900/20 flex flex-col bg-yellow-50">
         <Bar progress={cooperative.totalProgress} />
 
         <div className="flex justify-between [&>span]:font-semibold [&>span]:text-[38px] mt-5 [&>span]:text-yellow-950">
