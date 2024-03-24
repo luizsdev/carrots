@@ -52,12 +52,10 @@ export const AddressInfoDropdown = ({ address, ensAvatar, displayName }: Address
       >
         <NetworkOptions hidden={!selectingNetwork} />
         <li className={selectingNetwork ? "hidden" : ""}>
-          <label className="btn-sm !rounded-xl flex gap-3 py-3">
+          <Link href="/rewards" className="whitespace-nowrap btn-sm !rounded-xl flex gap-3 py-3">
             <CakeIcon className="h-6 w-4 ml-2 sm:ml-0" />
-            <Link href="/rewards" className="whitespace-nowrap">
-              Rewards
-            </Link>
-          </label>
+            <label className="">Rewards</label>
+          </Link>
         </li>
         <li className={selectingNetwork ? "hidden" : ""}>
           <button className="menu-item btn-sm !rounded-xl flex gap-3 py-3" type="button">
