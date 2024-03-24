@@ -6,7 +6,7 @@ type RewardCardProps = {
 };
 export function RewardCard({ progress = 100, disabled = false }: RewardCardProps) {
   return (
-    <div className="w-full flex justify-between shadow-lg h-[134px] px-4 py-8 items-center text-yellow-950 text-2xl rounded-lg ">
+    <div className="w-full flex justify-between shadow-lg h-[134px] px-4 py-8 items-center text-yellow-950 text-2xl rounded-lg bg-yellow-50">
       <div className="flex gap-[150px] items-end h-full ">
         <div className="flex flex-col  justify-start">
           <span className="font-semibold text-2xl">Cooperativa de Soja do Mato Grosso</span>
@@ -16,7 +16,7 @@ export function RewardCard({ progress = 100, disabled = false }: RewardCardProps
           </div>
         </div>
         <span>
-          <span className="text-yellow-950 text-2xl ">Qty. Tokens:</span> 156900
+          <span className="text-yellow-950 text-2xl font-semibold">Qty. Tokens:</span> 156900
         </span>
       </div>
       <div className="flex gap-5 h-full items-center">

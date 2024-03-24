@@ -3,7 +3,7 @@
 @import "tailwindcss/utilities";
 
 body {
-  @apply bg-yellow-50;
+  @apply bg-white;
   min-height: 100vh;
 }
 

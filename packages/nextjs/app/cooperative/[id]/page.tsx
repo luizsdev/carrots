@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { PurchaseTokens } from "../_components/PurchaseTokens";
 import { Bar } from "~~/app/marketplace/components/Bar";
 import { CooperativeProps } from "~~/types/marketplace";
 
@@ -91,7 +92,7 @@ export default function Cooperative({ params }: { params: { id: string } }) {
         <p>Junte-se a nós e faça parte dessa história de sucesso!</p>
       </div>
 
-      <div>
+      <div className="shadow-xl rounded-[10px] px-14 pt-8 pb-14 shadow-yellow-900/20 flex flex-col">
         <Bar progress={cooperative.totalProgress} />
 
         <div className="flex justify-between [&>span]:font-semibold [&>span]:text-[38px] mt-5 [&>span]:text-yellow-950">
@@ -99,6 +100,42 @@ export default function Cooperative({ params }: { params: { id: string } }) {
           <span>${cooperative.currentProgress}</span>
           <span>{cooperative.remaningTime}</span>
         </div>
+
+        <div className="mt-14 flex items-center justify-between gap-2 flex-wrap">
+          <div>
+            <span className="text-yellow-950 text-xl font-semibold">Website:</span>
+            <a
+              href="https://cooperativasojamt.com.br"
+              target="_blank"
+              rel="noreferrer"
+              className="text-blue-500 text-xl hover:underline"
+            >
+              &nbsp;https://cooperativasojamt.com.br
+            </a>
+          </div>
+
+          <span className="text-yellow-950 text-xl font-semibold">
+            Modalidade: <span className="font-normal">Recompensa*</span>
+          </span>
+        </div>
+
+        <p className="text-yellow-950 text-xl mt-10">
+          *Na modalidade Recompensa os investidores que participaram da arrecadação recebem produtos ou serviços da
+          cooperativa. A quantidade, quando, e quais produtos e serviços serão deliberados, são decisões a critério da
+          coorporativa. Para mais informações sobre as modalidades acesse o link.
+        </p>
+
+        <div className="mt-14 flex items-center justify-between gap-2">
+          <span className="text-yellow-950 text-xl font-semibold">
+            Max Supply: <span className="font-normal">Recompensa*</span>
+          </span>
+
+          <span className="text-yellow-950 text-xl font-semibold">
+            Price Unit: <span className="font-normal">Recompensa*</span>
+          </span>
+        </div>
+
+        <PurchaseTokens />
       </div>
     </div>
   );
