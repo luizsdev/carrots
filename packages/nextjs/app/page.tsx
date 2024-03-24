@@ -3,13 +3,13 @@
 import { CooperativeCard } from "./marketplace/components/CooperativeCard";
 import type { NextPage } from "next";
 import { FunnelIcon, ListBulletIcon, Squares2X2Icon } from "@heroicons/react/24/outline";
+import { CooperativeProps } from "~~/types/marketplace";
 
-const cooperatives = [
+const cooperatives: CooperativeProps[] = [
   {
     name: "Cooperativa de Café da Paraíba",
     location: "Kumasi",
     id: "1",
-    description: "Farm 1 is a cooperative in Kumasi",
     members: 10,
     crops: ["Cassava", "Maize", "Tomato"],
     image: "/coop1.png",
@@ -21,7 +21,6 @@ const cooperatives = [
     name: "Cooperativa de Milho Verde",
     location: "Accra",
     id: "2",
-    description: "Farm 2 is a cooperative in Accra",
     members: 20,
     crops: ["Cassava", "Maize", "Tomato"],
     image: "/coop2.png",
@@ -33,7 +32,6 @@ const cooperatives = [
     name: "Cooperativa de Soja do Mato Grosso",
     location: "Takoradi",
     id: "3",
-    description: "Farm 3 is a cooperative in Takoradi",
     members: 30,
     crops: ["Cassava", "Maize", "Tomato"],
     image: "/coop3.png",
@@ -45,7 +43,6 @@ const cooperatives = [
     name: "Cooperativa de Soja do Mato Grosso",
     location: "Ho",
     id: "4",
-    description: "Farm 4 is a cooperative in Ho",
     members: 40,
     crops: ["Cassava", "Maize", "Tomato"],
     image: "/coop3.png",
@@ -54,6 +51,7 @@ const cooperatives = [
     remaningTime: "1 day",
   },
 ];
+
 const Home: NextPage = () => {
   return (
     <>
