@@ -401,7 +401,7 @@ const deployedContracts = {
   },
   534351: {
     Cooperative: {
-      address: "0xb977909Fe9B7847A61d6Eb47C7af4005f9cf7BF0",
+      address: "0x0eBD4D3512F341a1E8a0d3E6CCeE41f4592e827B",
       abi: [
         {
           inputs: [
