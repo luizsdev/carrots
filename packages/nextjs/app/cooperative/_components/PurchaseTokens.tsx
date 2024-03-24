@@ -6,7 +6,7 @@ export const PurchaseTokens = () => {
         placeholder="Amount USDC"
       />
 
-      <button className="text-2xl w-[211px] font-semibold h-[80px] border-2 rounded-[10px] text-yellow-50 bg-yellow-950">
+      <button className="text-2xl w-[211px] font-semibold h-[80px] border-2 rounded-[10px] hover:bg-yellow-900 text-yellow-50 bg-yellow-950">
         Comprar
       </button>
     </div>
