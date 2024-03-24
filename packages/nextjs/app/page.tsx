@@ -13,8 +13,8 @@ const cooperatives: CooperativeProps[] = [
     members: 10,
     crops: ["Cassava", "Maize", "Tomato"],
     image: "/coop1.png",
-    totalProgress: 88,
-    currentProgress: "4.86K/6K",
+    totalProgress: 91.6,
+    currentProgress: "5.5K/6K",
     remaningTime: "7 days",
   },
   {

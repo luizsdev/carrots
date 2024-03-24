@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { PurchaseTokens } from "../_components/PurchaseTokens";
 import { Bar } from "~~/app/marketplace/components/Bar";
@@ -13,8 +14,8 @@ const cooperatives: CooperativeProps[] = [
     members: 10,
     crops: ["Cassava", "Maize", "Tomato"],
     image: "/coop1.png",
-    totalProgress: 88,
-    currentProgress: "4.86K/6K",
+    totalProgress: 91.6,
+    currentProgress: "5.5K/6K",
     remaningTime: "7 days",
   },
   {
@@ -54,6 +55,7 @@ const cooperatives: CooperativeProps[] = [
 
 export default function Cooperative({ params }: { params: { id: string } }) {
   const cooperative: CooperativeProps | undefined = cooperatives.findLast(c => c.id === params.id);
+  const [progress, setProgress] = useState(cooperative?.totalProgress || 0);
 
   if (!cooperative) {
     return <div>Cooperative not found</div>;
@@ -98,11 +100,11 @@ export default function Cooperative({ params }: { params: { id: string } }) {
       </section>
 
       <section className="shadow-xl rounded-[10px] px-14 pt-8 pb-14 shadow-yellow-900/20 flex flex-col bg-yellow-50">
-        <Bar progress={cooperative.totalProgress} />
+        <Bar progress={progress} />
 
         <div className="flex justify-between [&>span]:font-semibold [&>span]:text-[38px] mt-5 [&>span]:text-yellow-950">
-          <span>{cooperative.totalProgress}%</span>
-          <span>${cooperative.currentProgress}</span>
+          <span>{progress}%</span>
+          <span>${progress === 100 ? "6K/6K" : cooperative.currentProgress}</span>
           <span>{cooperative.remaningTime}</span>
         </div>
 
@@ -132,7 +134,7 @@ export default function Cooperative({ params }: { params: { id: string } }) {
 
         <div className="mt-14 flex items-center justify-between gap-2">
           <span className="text-yellow-950 text-xl font-semibold">
-            Max Supply: <span className="font-normal">Recompensa*</span>
+            Max Supply: <span className="font-normal">60000 COOP</span>
           </span>
 
           <span className="text-yellow-950 text-xl font-semibold">
@@ -140,7 +142,11 @@ export default function Cooperative({ params }: { params: { id: string } }) {
           </span>
         </div>
 
-        <PurchaseTokens />
+        <PurchaseTokens
+          onComplete={() => {
+            setProgress(100);
+          }}
+        />
       </section>
     </article>
   );
