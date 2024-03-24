@@ -41,7 +41,7 @@ export const HeaderMenuLinks = () => {
               href={href}
               passHref
               data-active={isActive}
-              className="text-lg data-[active=true]:underline hover:underline underline-offset-4 rounded-full font-semibold"
+              className="text-lg data-[active=true]:underline text-yellow-950 hover:underline underline-offset-4 rounded-full font-semibold"
             >
               {label}
             </Link>
@@ -70,7 +70,7 @@ export const Header = () => {
         </ul>
       </nav>
 
-      <div className="bg-yellow-100 px-4 flex rounded-lg flex-shrink w-full max-w-[410px] h-10 shadow-md mx-auto">
+      <div className="bg-yellow-100 px-4 flex rounded-lg flex-shrink w-full max-w-[410px] h-10 mx-auto">
         <MagnifyingGlassIcon width={22} className="stroke-yellow-950 pointer-events-none mr-2" />
         <input
           className="bg-transparent rounded w-full placeholder:text-yellow-950 focus:outline-none"
