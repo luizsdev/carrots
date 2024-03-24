@@ -5,9 +5,9 @@
 import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 
 const deployedContracts = {
-  31337: {
+  534351: {
     Cooperative: {
-      address: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      address: "0x9cfF752a6Dd607AeC25e74deB52A39d77267458f",
       abi: [
         {
           inputs: [
@@ -384,19 +384,7 @@ const deployedContracts = {
           type: "function",
         },
       ],
-      inheritedFunctions: {
-        allowance: "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-        approve: "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-        balanceOf: "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-        decimals: "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-        decreaseAllowance: "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-        increaseAllowance: "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-        name: "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-        symbol: "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-        totalSupply: "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-        transfer: "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-        transferFrom: "@openzeppelin/contracts/token/ERC20/ERC20.sol",
-      },
+      inheritedFunctions: {},
     },
   },
 } as const;
